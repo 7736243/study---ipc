@@ -23,6 +23,7 @@ int main(){
     num=(int*)memory_segment;
     (*num)++;
     printf("shared memory value : %d\n", (*num));
+    
     if(shmctl(shmid,IPC_RMID,NULL)==-1){
         printf("shmctl failed\n");
     }
