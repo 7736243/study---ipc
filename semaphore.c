@@ -27,7 +27,6 @@ int initsem(key_t semkey){
     }
     else{
         semunarg.val=1;
-        // 세마포어 값 1로 초기화
         status = semctl(semid, 0, SETVAL, semunarg);
     }
 
